@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <title>Cow Creation</title>
-    <h1>This is where you'll create your first cow.</h1>
-    <ol>
-        <li>Choose your cow's appearance</li>
-        <li>Name your cow</li>
-        <li>Place you cow</li>
-    </ol>
+    <head>
+        <title>Cow Creation</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <h1>This is where you'll create your first cow.</h1>
+        <ol id="steps">
+            <li>Choose your cow's appearance</li>
+            <li>Name your cow</li>
+            <li>Place you cow</li>
+        </ol>
+        <br>
+        <h3>Here are your options</h3>
+        <img src="/images/cow-Holstein-Friesian.webp">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+              
+              var the_steps = document.getElementById("steps")
+              the_steps.style.color= "red";
+            })
+            
+          </script>
+    </body>
 </html>
