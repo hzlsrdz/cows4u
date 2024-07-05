@@ -26,22 +26,27 @@
         <div id="selected-cow" class="sidebar">
             <!-- Selected cow will appear here -->
         </div>
-        
+        <!-- This is the JS code!!! --> 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Select all cow images
                 const cowImages = document.querySelectorAll('.cow-options img');
                 
-                // Add click event listener to each cow image
+                // Adds click event listener to each cow image
                 cowImages.forEach(function(img) {
                     img.addEventListener('click', function() {
                         // Get cow name and image URL
                         const name = this.getAttribute('alt');
                         const imageUrl = this.getAttribute('src');
                         
-                        // Update the sidebar with the selected cow
+                        // Updates the sidebar with the selected cow
                         const sidebar = document.getElementById('selected-cow');
-                        sidebar.innerHTML = `<h3>${name}</h3><img src="${imageUrl}" alt="${name}">`;
+                        sidebar.innerHTML = `
+                            <div class="sidebar-content">
+                                <h3>${name}</h3>
+                                <img src="${imageUrl}" alt="${name}">
+                            </div>
+                        `;
                     });
                 });
             });

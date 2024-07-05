@@ -46,6 +46,14 @@ img {
     cursor: pointer;
     padding: 5px; /* Optional padding for spacing */
 }
+.sidebar {
+    border: 1px solid #CCD5AE;
+    padding: 10px;
+    max-width: 300px; /* Limit width for the sidebar */
+}
+.sidebar-content {
+    text-align: center; /* Center content */
+}
 .sidebar img {
     max-width: 100%; /* Ensure image does not exceed sidebar width */
     height: auto; /* Maintain aspect ratio */
