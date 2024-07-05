@@ -18,10 +18,20 @@
         </ol>
         <br>
         <h3>Here are your options</h3>
-        <img src="{{ url_for('static', filename='images/blackwhite.png') }}">
-        <img src="{{ url_for('static', filename='pink.png') }}">
-        <img src="{{ url_for('static', filename='images/brown.png') }}">
-        <img src="{{ url_for('static', filename='images/lowrez.png') }}">
-       
+        <div class="cow-options">
+            <img src="{{ url_for('static', filename='images/blackwhite.png') }}" onclick="selectCow('Black and White', 'images/blackwhite.png')">
+            <img src="{{ url_for('static', filename='images/brown.png') }}" onclick="selectCow('Brown', 'images/brown.png')">
+            <img src="{{ url_for('static', filename='images/lowrez.png') }}" onclick="selectCow('Low Resolution', 'images/lowrez.png')">
+        </div>
+        <div id="selected-cow" class="sidebar">
+            <!-- Selected cow will appear here -->
+        </div>
+        
+        <script>
+            function selectCow(name, imageUrl) {
+                // Update the sidebar with the selected cow
+                $('#selected-cow').html(`<h3>${name}</h3><img src="${imageUrl}">`);
+            }
+        </script>
     </body>
 </html>
