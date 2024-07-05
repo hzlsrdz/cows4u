@@ -46,8 +46,8 @@ img {
     cursor: pointer;
     padding: 5px; /* Optional padding for spacing */
 }
-.sidebar {
-    border: 1px solid #ddd;
-    padding: 10px;
-    width: 250px; /* Optional width for the sidebar */
+.sidebar img {
+    max-width: 100%; /* Ensure image does not exceed sidebar width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Optional margin for spacing */
 }

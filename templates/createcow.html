@@ -19,9 +19,9 @@
         <br>
         <h3>Here are your options</h3>
         <div class="cow-options">
-            <img src="{{ url_for('static', filename='images/blackwhite.png') }}" onclick="selectCow('Black and White', 'images/blackwhite.png')">
-            <img src="{{ url_for('static', filename='images/brown.png') }}" onclick="selectCow('Brown', 'images/brown.png')">
-            <img src="{{ url_for('static', filename='images/lowrez.png') }}" onclick="selectCow('Low Resolution', 'images/lowrez.png')">
+            <img src="{{ url_for('static', filename='images/blackwhite.png') }}" alt="Dalma">
+            <img src="{{ url_for('static', filename='images/brown.png') }}" alt="Onny">
+            <img src="{{ url_for('static', filename='images/lowrez.png') }}" alt="Stick">
         </div>
         <div id="selected-cow" class="sidebar">
             <!-- Selected cow will appear here -->
@@ -31,7 +31,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 // Select all cow images
                 const cowImages = document.querySelectorAll('.cow-options img');
-
+                
                 // Add click event listener to each cow image
                 cowImages.forEach(function(img) {
                     img.addEventListener('click', function() {
@@ -41,7 +41,7 @@
                         
                         // Update the sidebar with the selected cow
                         const sidebar = document.getElementById('selected-cow');
-                        sidebar.innerHTML = `<h3>${name}</h3><img src="${imageUrl}">`;
+                        sidebar.innerHTML = `<h3>${name}</h3><img src="${imageUrl}" alt="${name}">`;
                     });
                 });
             });
