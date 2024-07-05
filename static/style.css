@@ -35,6 +35,15 @@ img {
     margin-top: 20px;
 }
 
+.content {
+    flex: 1; /* Takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .cow-options {
     display: flex;
     justify-content: space-around;
@@ -53,7 +62,8 @@ img {
     border: 1px solid #CCD5AE;
     padding: 10px;
     max-width: 300px; /* Limit width for the sidebar */
-    margin-top: 20px; /* Adjust spacing */
+    margin-top: auto; /* Push sidebar to the bottom */
+    margin-bottom: 20px; /* Optional margin for spacing */
 }
 
 .sidebar-content {
