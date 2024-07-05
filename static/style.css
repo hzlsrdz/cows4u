@@ -11,6 +11,7 @@ body, html {
     background-color: #FEFAE0;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 ol {
@@ -40,20 +41,25 @@ img {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .cow-options img {
     width: 200px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
     cursor: pointer;
     padding: 5px; /* Optional padding for spacing */
 }
+
 .sidebar {
     border: 1px solid #CCD5AE;
     padding: 10px;
     max-width: 300px; /* Limit width for the sidebar */
+    margin-top: 20px; /* Adjust spacing */
 }
+
 .sidebar-content {
     text-align: center; /* Center content */
 }
+
 .sidebar img {
     max-width: 100%; /* Ensure image does not exceed sidebar width */
     height: auto; /* Maintain aspect ratio */

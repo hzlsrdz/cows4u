@@ -10,21 +10,25 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
     </head>
     <body>
-        <h1>This is where you'll create your first cow.</h1>
-        <ol>
-            <li>Choose your cow's appearance</li>
-            <li>Name your cow</li>
-            <li>Place you cow</li>
-        </ol>
-        <br>
-        <h3>Here are your options</h3>
-        <div class="cow-options">
-            <img src="{{ url_for('static', filename='images/blackwhite.png') }}" alt="Dalma">
-            <img src="{{ url_for('static', filename='images/brown.png') }}" alt="Onny">
-            <img src="{{ url_for('static', filename='images/lowrez.png') }}" alt="Stick">
-        </div>
-        <div id="selected-cow" class="sidebar">
-            <!-- Selected cow will appear here -->
+        <div class="container">
+            <div class="content">
+                <h1>This is where you'll create your first cow.</h1>
+                <ol>
+                    <li>Choose your cow's appearance</li>
+                    <li>Name your cow</li>
+                    <li>Place your cow</li>
+                </ol>
+                <br>
+                <h3>Here are your options</h3>
+                <div class="cow-options">
+                    <img id="cow1" src="{{ url_for('static', filename='images/blackwhite.png') }}" alt="Felicity">
+                    <img id="cow2" src="{{ url_for('static', filename='images/brown.png') }}" alt="Leslie">
+                    <img id="cow3" src="{{ url_for('static', filename='images/lowrez.png') }}" alt="Vivian">
+                </div>
+            </div>
+            <div id="selected-cow" class="sidebar">
+                <!-- Selected cow will appear here -->
+            </div>
         </div>
         <!-- This is the JS code!!! --> 
         <script>
@@ -32,14 +36,14 @@
                 // Select all cow images
                 const cowImages = document.querySelectorAll('.cow-options img');
                 
-                // Adds click event listener to each cow image
+                // Add click event listener to each cow image
                 cowImages.forEach(function(img) {
                     img.addEventListener('click', function() {
                         // Get cow name and image URL
                         const name = this.getAttribute('alt');
                         const imageUrl = this.getAttribute('src');
                         
-                        // Updates the sidebar with the selected cow
+                        // Update the sidebar with the selected cow
                         const sidebar = document.getElementById('selected-cow');
                         sidebar.innerHTML = `
                             <div class="sidebar-content">
