@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Herd</title>
+    <style>
+        body {
+            background-color: #87CEEB; /* Sky blue */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .pasture {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            background-color: #7CFC00; /* Lawn green */
+            overflow: hidden;
+            border: 5px solid #006400; /* Dark green border */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #87CEEB; /* Sky blue */
+        }
+
+        .grass {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #7CFC00; /* Lawn green */
+        }
+
+        .cow {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 100%;
+            max-height: 100%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="pasture">
+        <div class="sky"></div>
+        <div class="grass"></div>
+        <img class="cow" src="{{ selected_cow_image }}" alt="Selected Cow">
+    </div>
+</body>
+</html>

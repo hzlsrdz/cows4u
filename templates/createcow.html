@@ -15,7 +15,7 @@
                 <h1>This is where you'll create your first cow.</h1>
                 <ol>
                     <li>Choose your cow's appearance</li>
-                    <li>Name your cow</li>
+                    <li>(Re)Name your cow</li>
                     <li>Place your cow</li>
                 </ol>
                 <br>
@@ -29,21 +29,21 @@
             <div id="selected-cow" class="sidebar">
                 <!-- Selected cow will appear here -->
             </div>
+            <div id="confirmation-button" style="display: none;">
+                <button onclick="confirmSelection()">Are you sure you want to start your herd with <span id="selected-cow-name"></span>?</button>
+            </div>
         </div>
         <!-- This is the JS code!!! --> 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
-                // Select all cow images
                 const cowImages = document.querySelectorAll('.cow-options img');
-                
-                // Add click event listener to each cow image
+                const confirmationButton = document.getElementById('confirmation-button');
+    
                 cowImages.forEach(function(img) {
                     img.addEventListener('click', function() {
-                        // Get cow name and image URL
                         const name = this.getAttribute('alt');
                         const imageUrl = this.getAttribute('src');
-                        
-                        // Update the sidebar with the selected cow
+    
                         const sidebar = document.getElementById('selected-cow');
                         sidebar.innerHTML = `
                             <div class="sidebar-content">
@@ -51,9 +51,22 @@
                                 <img src="${imageUrl}" alt="${name}">
                             </div>
                         `;
+    
+                        // Show confirmation button and set selected cow name
+                        document.getElementById('selected-cow-name').textContent = name;
+                        confirmationButton.style.display = 'block';
                     });
                 });
             });
+    
+            function confirmSelection() {
+                const selectedCowName = document.getElementById('selected-cow-name').textContent;
+                const confirmed = confirm(`Are you sure you want to start your herd with ${selectedCowName}?`);
+                if (confirmed) {
+                    // Redirect to Flask route
+                    window.location.href = "{{ url_for('herd') }}";
+                }
+            }
         </script>
     </body>
 </html>
