@@ -1,7 +1,5 @@
-/* Updated CSS with pastel green/springtime aesthetic */
-
 h1 {
-    color: blueviolet;
+    color: #D4A373;
     text-align: center;
     text-transform: uppercase;
     text-decoration: underline;
@@ -10,7 +8,7 @@ h1 {
 body, html {
     font-family: "Noto Sans", sans-serif;
     text-align: center;
-    background-color: #f0f0f0; /* Light background */
+    background-color: #FEFAE0;
     margin: 0;
     padding: 0;
 }
@@ -19,19 +17,19 @@ ol {
     list-style-position: inside;
     display: table;
     margin: 0 auto;
-    padding-left: 20px; /* Added padding for better spacing */
+    padding-left: 20px;
 }
 
 img {
     margin-bottom: 30px;
-    border: 3px solid #6ab04c; /* Pastel green border */
-    border-radius: 5px; /* Rounded corners */
+    border: 3px solid #CCD5AE;
+    border-radius: 5px;
 }
 
 .quote {
     font-size: 1.2em;
-    background-color: #f9f9f9;
-    border-left: 10px solid #9dc183; /* Light green border on the left */
+    background-color: #FAEDCD;
+    border-left: 10px solid #D4A373;
     padding: 10px;
-    margin-top: 20px; /* Added margin for separation */
+    margin-top: 20px;
 }
