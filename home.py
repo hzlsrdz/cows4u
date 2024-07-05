@@ -10,7 +10,7 @@ def home():
 
 @app.route("/createCow")
 def makeCow():
-    return render_template('createcow.html')
+    return render_template('createcow.html', subtitle='Create A Cow', text='This is cow creation menu'))
 
 @app.route("/update_server", methods=['POST'])
 def webhook():
