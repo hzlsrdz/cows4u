@@ -11,7 +11,7 @@
     </head>
     <body>
         <h1>This is where you'll create your first cow.</h1>
-        <ol id="steps">
+        <ol>
             <li>Choose your cow's appearance</li>
             <li>Name your cow</li>
             <li>Place you cow</li>
@@ -19,14 +19,9 @@
         <br>
         <h3>Here are your options</h3>
         <img src="{{ url_for('static', filename='images/blackwhite.png') }}">
+        <img src="{{ url_for('static', filename='pink.png') }}">
+        <img src="{{ url_for('static', filename='images/brown.png') }}">
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function(){
-              
-              var the_steps = document.getElementById("steps")
-              the_steps.style.color= "red";
-            })
-            
-          </script>
+       
     </body>
 </html>
