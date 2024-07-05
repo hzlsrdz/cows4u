@@ -35,6 +35,40 @@ img {
     margin-top: 20px;
 }
 
+.cow-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.cow-options img {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer;
+    padding: 5px; /* Optional padding for spacing */
+}
+.sidebar {
+    border: 1px solid #CCD5AE;
+    padding: 10px;
+    max-width: 300px; /* Limit width for the sidebar */
+}
+.sidebar-content {
+    text-align: center; /* Center content */
+}
+.sidebar img {
+    max-width: 100%; /* Ensure image does not exceed sidebar width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Optional margin for spacing */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Aligns content with space between them */
+    align-items: center;
+}
+
 .content {
     flex: 1; /* Takes up remaining space */
     display: flex;
@@ -42,36 +76,4 @@ img {
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.cow-options {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.cow-options img {
-    width: 200px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    cursor: pointer;
-    padding: 5px; /* Optional padding for spacing */
-}
-
-.sidebar {
-    border: 1px solid #CCD5AE;
-    padding: 10px;
-    max-width: 300px; /* Limit width for the sidebar */
-    margin-top: auto; /* Push sidebar to the bottom */
-    margin-bottom: 20px; /* Optional margin for spacing */
-}
-
-.sidebar-content {
-    text-align: center; /* Center content */
-}
-
-.sidebar img {
-    max-width: 100%; /* Ensure image does not exceed sidebar width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Optional margin for spacing */
 }
