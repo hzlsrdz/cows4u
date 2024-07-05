@@ -28,10 +28,23 @@
         </div>
         
         <script>
-            function selectCow(name, imageUrl) {
-                // Update the sidebar with the selected cow
-                $('#selected-cow').html(`<h3>${name}</h3><img src="${imageUrl}">`);
-            }
+            document.addEventListener('DOMContentLoaded', function() {
+                // Select all cow images
+                const cowImages = document.querySelectorAll('.cow-options img');
+
+                // Add click event listener to each cow image
+                cowImages.forEach(function(img) {
+                    img.addEventListener('click', function() {
+                        // Get cow name and image URL
+                        const name = this.getAttribute('alt');
+                        const imageUrl = this.getAttribute('src');
+                        
+                        // Update the sidebar with the selected cow
+                        const sidebar = document.getElementById('selected-cow');
+                        sidebar.innerHTML = `<h3>${name}</h3><img src="${imageUrl}">`;
+                    });
+                });
+            });
         </script>
     </body>
 </html>
