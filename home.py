@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+@app.route("/createCow")
+def makeCow():
+    return render_template('createcow.html')
+
 @app.route("/update_server", methods=['POST'])
 def webhook():
     if request.method == 'POST':
